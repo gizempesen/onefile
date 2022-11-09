@@ -1,7 +1,7 @@
 import json
 import subprocess
 
-subprocess.run('sudo ./terraform-install.sh', shell=True)
+subprocess.run('sudo ./scripts/terraform-install.sh', shell=True)
 
 with open('vars.json', 'r') as f:
   data = json.load(f)
@@ -13,4 +13,4 @@ with open('vars.json', 'r') as f:
 #print(data["age"])
 
 if data["name"] == 'docker':
-  subprocess.run('sudo ./terraform-docker.sh', shell=True)
+  subprocess.run('sudo .scripts//terraform-docker.sh', shell=True)
