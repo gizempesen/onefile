@@ -13,4 +13,8 @@ with open('vars.json', 'r') as f:
 #print(data["age"])
 
 if data["name"] == 'docker':
-  subprocess.run('sudo .scripts//terraform-docker.sh', shell=True)
+  subprocess.run('sudo ./scripts/terraform-docker.sh', shell=True)
+if data["name"] == 'hadoop':
+  subprocess.run('sudo ./scripts/terraform-hadoop.sh', shell=True)
+if data["name"] == 'kubernetes':
+  subprocess.run('sudo ./scripts/terraform-kubernetes.sh', shell=True)
